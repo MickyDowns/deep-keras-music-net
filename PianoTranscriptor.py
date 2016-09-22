@@ -45,6 +45,7 @@ def main():
         
         The 'pickle' mode can be used to store the used parameters to be able to exactly reproduce experiments.
                                     ''')
+
     # version
     p.add_argument('--version', action='version',
                    version='PianoTranscriptor.2013')
@@ -64,10 +65,10 @@ def main():
     # mirex stuff
     p.add_argument('--mirex', dest='output_format', action='store_const',
                    const='mirex', help='use the MIREX output format')
-                   
+
     # parse arguments
     args = p.parse_args()
-                   
+    
     # set immutable defaults
     args.fps = 100
     args.pre_max = 1. / args.fps
